@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>Test-Automation config</comment>
+
+    <entry key="BaseUrl">https://parabank.parasoft.com/</entry>
+    <entry key="username">uatreya</entry>
+    <entry key="password">uatreya</entry>
+
+</properties>
