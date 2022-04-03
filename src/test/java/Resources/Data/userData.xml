@@ -2,8 +2,9 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <comment>Test-Automation config</comment>
-
+    <!--<Environments UR>-->
     <entry key="BaseUrl">https://parabank.parasoft.com/</entry>
+    <!--<Valid Credentials>-->
     <entry key="username">uatreya</entry>
     <entry key="password">uatreya</entry>
 
