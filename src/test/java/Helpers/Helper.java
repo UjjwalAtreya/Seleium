@@ -1,12 +1,6 @@
 package Helpers;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
-import org.testng.util.Strings;
-
 import java.io.*;
 import java.util.Properties;
 
