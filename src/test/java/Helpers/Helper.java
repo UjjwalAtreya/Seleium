@@ -4,6 +4,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.openqa.selenium.WebDriver;
 import org.testng.util.Strings;
 
 import java.io.*;
@@ -16,7 +17,7 @@ public class Helper {
     }
 
     public static void readConfig() {
-        String workingDir = System.getProperty("user.dir")+"/src/test/java/Resources/userData.xml";
+        String workingDir = System.getProperty("user.dir")+"/src/test/java/Resources/Data/userData.xml";
         try {
             File file = new File(workingDir);
             FileInputStream fileInput = new FileInputStream(file);
@@ -29,5 +30,17 @@ public class Helper {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+
+    // LocalWebDriverManager
+    private static final ThreadLocal<WebDriver> webDriver = new ThreadLocal<WebDriver>();
+
+    public static WebDriver getDriver() {
+        return webDriver.get();
+    }
+
+    public static void setWebDriver(WebDriver driver) {
+        webDriver.set(driver);
     }
 }

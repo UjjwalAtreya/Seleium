@@ -9,21 +9,29 @@ import org.testng.annotations.BeforeSuite;
 import static Helpers.Helper.*;
 
 public class Hooks {
-    public static WebDriver driver;
+   // public static WebDriver driver;
     @BeforeSuite
     public void loadData() throws InterruptedException {
         readConfig();
-    }
-
-    @BeforeMethod
-    public void setup(){
-        WebDriverManager.chromedriver().setup();
-        driver= new ChromeDriver();
-        driver.get(prop.getProperty("BaseUrl"));
+        createInstance();
     }
 
     @AfterSuite
     public void tearDown(){
-        driver.quit();
+        getDriver().quit();
+    }
+
+    public static WebDriver createInstance() {
+        WebDriver driver = null;
+        try {
+            WebDriverManager.chromedriver().setup();
+            driver= new ChromeDriver();
+            driver.get(prop.getProperty("BaseUrl"));
+            Helper.setWebDriver(driver);
+            return driver;
+        } catch (Exception errorCreateInstance) {
+            System.out.println("Cannot create Instance due to :" + errorCreateInstance);
+        }
+        return driver;
     }
 }

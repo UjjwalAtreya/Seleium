@@ -9,7 +9,24 @@ public class LoginTest extends Hooks {
 
     @Test
     public void testWithValidCredentials(){
-        LoginPage loginPage = new LoginPage(driver);
+        System.out.println(Thread.currentThread().getId());
+        LoginPage loginPage = new LoginPage(getDriver());
+        loginPage.enterUserName(prop.getProperty("username"));
+        loginPage.enterPassword(prop.getProperty("username"));
+        loginPage.clickLoginButton();
+    }
+    @Test
+    public void testWithValidCredentials1(){
+        System.out.println(Thread.currentThread().getId());
+        LoginPage loginPage = new LoginPage(getDriver());
+        loginPage.enterUserName(prop.getProperty("username"));
+        loginPage.enterPassword(prop.getProperty("username"));
+        loginPage.clickLoginButton();
+    }
+    @Test
+    public void testWithValidCredentials2(){
+        System.out.println(Thread.currentThread().getId());
+        LoginPage loginPage = new LoginPage(getDriver());
         loginPage.enterUserName(prop.getProperty("username"));
         loginPage.enterPassword(prop.getProperty("username"));
         loginPage.clickLoginButton();
