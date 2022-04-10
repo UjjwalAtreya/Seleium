@@ -23,7 +23,6 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <parallel>tests</parallel>
                     <threadCount>10</threadCount>
-
                     <suiteXmlFiles>
                         <suiteXmlFile>testNg.xml</suiteXmlFile>
                     </suiteXmlFiles>

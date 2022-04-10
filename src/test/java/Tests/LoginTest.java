@@ -10,8 +10,6 @@ public class LoginTest extends Hooks {
 
     @Test
     public void testWithValidCredentials(){
-        System.out.println(Thread.currentThread().getId());
-        System.out.println("Driver is ======"+Helper.getDriver());
         LoginPage loginPage = new LoginPage(Helper.getDriver());
         loginPage.enterUserName(prop.getProperty("username"));
         loginPage.enterPassword(prop.getProperty("username"));
@@ -19,8 +17,6 @@ public class LoginTest extends Hooks {
     }
     @Test
     public void testWithValidCredentials1(){
-        System.out.println(Thread.currentThread().getId());
-        System.out.println("Driver is ======"+Helper.getDriver());
         LoginPage loginPage = new LoginPage(Helper.getDriver());
         loginPage.enterUserName(prop.getProperty("username"));
         loginPage.enterPassword(prop.getProperty("username"));
@@ -28,8 +24,6 @@ public class LoginTest extends Hooks {
     }
     @Test
     public void testWithValidCredentials2(){
-        System.out.println(Thread.currentThread().getId());
-        System.out.println("Driver is ======"+Helper.getDriver());
         LoginPage loginPage = new LoginPage(Helper.getDriver());
         loginPage.enterUserName(prop.getProperty("username"));
         loginPage.enterPassword(prop.getProperty("username"));

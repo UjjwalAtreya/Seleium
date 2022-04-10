@@ -11,7 +11,6 @@ import org.testng.annotations.BeforeSuite;
 import static Helpers.Helper.*;
 
 public class Hooks {
-   // public static WebDriver driver;
     @BeforeSuite
     public void loadData() throws InterruptedException {
         readConfig();
@@ -19,7 +18,6 @@ public class Hooks {
 
     @AfterMethod
     public void tearDown(){
-        System.out.println("============="+getDriver());
         try {
             WebDriver driver = Helper.getDriver();
             if (driver != null) {
@@ -30,10 +28,10 @@ public class Hooks {
         }
     }
 
-
     public static WebDriver createInstance() {
         WebDriver driver = null;
         try {
+            System.out.println("Creating Instances For the test");
             WebDriverManager.chromedriver().setup();
             driver= new ChromeDriver();
             driver.get(prop.getProperty("BaseUrl"));
