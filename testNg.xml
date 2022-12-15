@@ -9,13 +9,14 @@
     <test name="LOGIN (Combinations) TEST" thread-count="3" verbose="3" parallel="methods">
         <parameter name="browserName" value="chrome"/>
         <classes>
-            <class name="Tests.LoginTest">
+            <class name="Tests.AllTest">
                 <methods>
-                    <include name="testWithValidCredentials"/>
-                    <include name="testWithValidCredentials1"/>
-                    <include name="testWithValidCredentials2"/>
+                    <exclude name="testWithValidCredentials"/>
+                    <exclude name="testToVerifyQuickLaunchMenu"/>
+                    <include name="testToVerifyIfEmployeeIsAddedOrNot"/>
                 </methods>
             </class>
+
         </classes>
     </test>
 </suite>

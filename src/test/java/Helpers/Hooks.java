@@ -35,6 +35,7 @@ public class Hooks {
             WebDriverManager.chromedriver().setup();
             driver= new ChromeDriver();
             driver.get(prop.getProperty("BaseUrl"));
+            Thread.sleep(5000);
             Helper.setWebDriver(driver);
             return driver;
         } catch (Exception errorCreateInstance) {
