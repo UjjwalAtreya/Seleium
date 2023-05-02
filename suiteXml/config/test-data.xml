@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>Automation Version 2</comment>
+    <entry key="BaseUrl">https://falco-dev-qa.azurewebsites.net/user/login.html</entry>
+    <entry key="BackOfficeURL">https://falco-dev-qa.azurewebsites.net/admin/login</entry>
+    <!--credentials to send email-->
+    <entry key="username">rajnish.pradhan1@mailinator.com</entry>
+    <entry key="password">05423</entry>
+    <entry key="BO_username">mark@vesuvio.io</entry>
+    <entry key="BO_password">Abcd1#</entry>
+
+</properties>

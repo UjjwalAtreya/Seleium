@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="R7 Automation Suite" parallel="tests">
+    <parameter name="configFile" value="test-data.xml"/>
+    <parameter name="HubUrl" value="http://192.168.200.26:4444/wd/hub"/>
+    <listeners>
+        <listener class-name="tests.Listener.WebDriverListener"/>
+        <listener class-name="tests.Listener.ListenerClass"/>
+        <listener class-name="tests.Listener.TestListener"/>
+        <listener class-name="tests.Listener.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="LOGIN PAGE TEST" verbose="2" parallel="methods" thread-count="5">
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="platform" value="WIN10"/>
+        <classes>
+            <class name="tests.LoginTest.LoginTest">
+                <methods>
+                    <include name="testLoginWithValidCredentials"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

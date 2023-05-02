@@ -1,0 +1,6 @@
+2017-12-29 12:19:11 [INFO] : Test is Running in :  http://192.168.200.26:5556/wd/hub :IP
+2017-12-29 12:19:11 [INFO] : Browser to be used is : chrome
+2017-12-29 12:19:11 [INFO] : *****INVOKING URL*******11
+2017-12-29 12:19:11 [ERROR] : URL not Invoked due to java.lang.NullPointerException
+2017-12-29 12:19:11 [INFO] : ENTERING username
+2017-12-29 12:19:11 [ERROR] : Failed to enter credentialsjava.lang.NullPointerException

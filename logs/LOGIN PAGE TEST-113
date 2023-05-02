@@ -1,0 +1,7 @@
+2018-01-08 16:04:28 [INFO] : Browser to be used is : chrome
+2018-01-08 16:04:28 [INFO] : Creating Instances For the test
+2018-01-08 16:04:41 [INFO] : *****INVOKING URL*******13
+2018-01-08 16:05:02 [INFO] : Image Comparision Started ...
+2018-01-08 16:05:02 [INFO] : Image is Present
+2018-01-08 16:05:07 [INFO] : Images are not Same
+2018-01-08 16:05:07 [INFO] : --Closing Browser--

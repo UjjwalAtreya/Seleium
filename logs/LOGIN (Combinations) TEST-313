@@ -1,0 +1,13 @@
+2017-12-29 12:47:56 [INFO] : Test is Running in : http://192.168.200.26:5556/wd/hub :IP
+2017-12-29 12:47:56 [INFO] : Browser to be used is : chrome
+2017-12-29 12:47:56 [INFO] : Creating Instances For the test
+2017-12-29 12:48:30 [INFO] : *****INVOKING URL*******13
+2017-12-29 12:48:56 [INFO] : Starting InValid Login Test
+2017-12-29 12:49:07 [INFO] : Login Page Opened Successully
+2017-12-29 12:49:07 [INFO] : ENTERING username
+2017-12-29 12:49:16 [INFO] : Entering password
+2017-12-29 12:49:19 [INFO] : ENTERING domain
+2017-12-29 12:49:23 [INFO] : Selecting Language
+2017-12-29 12:50:39 [INFO] : Clicked on Login Button
+2017-12-29 12:50:46 [INFO] : Invalid Login Test Passed
+2017-12-29 12:50:46 [INFO] : --Closing Browser--
