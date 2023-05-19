@@ -5,6 +5,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.TestNGException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -38,21 +40,30 @@ public class Setup {
     public static WebDriver createInstance() throws IOException {
         /* This function will create a instance of chrome driver,
         * We need to add mre logics for different browser support..*/
-        WebDriver driver;
-
-        if (browser.equalsIgnoreCase("chrome")) {
-            ChromeOptions option = new ChromeOptions();
-            option.addArguments("disable-infobars");
-            option.addArguments("--remote-allow-origins=*");
-
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver(option);
-            driver.manage().window().maximize();
+        WebDriver driver = null;
+        try {
+            if(browser.equalsIgnoreCase("chrome")){
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--remote-allow-origins=*");
+                WebDriverManager.chromedriver().setup();
+                driver= new ChromeDriver(options);
+                driver.manage().window().maximize();
+            } else if (browser.equalsIgnoreCase("firefox")) {
+                WebDriverManager.firefoxdriver().setup();
+                driver=new FirefoxDriver();
+                driver.manage().window().maximize();
+            } else if (browser.equalsIgnoreCase("safari")) {
+                WebDriverManager.safaridriver().setup();
+                driver = new SafariDriver();
+                driver.manage().window().maximize();
+            }
             driver.get(prop.getProperty("BaseUrl"));
-
+            Thread.sleep(5000);
             return driver;
+        } catch (Exception errorCreateInstance) {
+            System.out.println("Cannot create Instance due to :" + errorCreateInstance);
         }
-        return null;
+        return driver;
     }
 
     @BeforeSuite
