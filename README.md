@@ -3,21 +3,14 @@
 ```
 selenium_javaFramework
 |   excels
-|   logoAndSvgs
 |   logs
 |   reports 
 └─── src
 |	 └─── main
 |	 |    └─── java
 |	 |    |    └─── PageObjects
-|	 |    |	        └─── FrontOffice
-|	 |    |	        |       | LoginPage.java
-|	 |    |         └─── BackOffice  
-|	 |    |	        └─── Utils
-|	 |    |	        |       | ExcelReader.java
-|	 |    |	        |       | ExtentManager.java
-|	 |    |         |       | ExtentTestManager.java
-|	 |    |         |       | Helper
+|	 |    |	      | LoginPage.java
+|	 |    |         
 |	 └─── test
 |	 |    └─── java
 |	 |    |    └─── tests
