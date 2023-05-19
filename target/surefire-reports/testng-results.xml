@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="1" passed="0" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-19T10:05:47 NPT" name="R7 Automation Suite" finished-at="2023-05-19T10:05:47 NPT" duration-ms="3">
+    <groups>
+    </groups>
+    <test started-at="2023-05-19T10:05:47 NPT" name="LOGIN PAGE TEST" finished-at="2023-05-19T10:05:47 NPT" duration-ms="3">
+      <class name="tests.LoginTest.LoginTest">
+        <test-method is-config="true" signature="getConfigFile(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest.LoginTest@61df66b6]" started-at="2023-05-19T10:05:47 NPT" name="getConfigFile" finished-at="2023-05-19T10:05:47 NPT" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test-data.xml]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://192.168.200.26:4444/wd/hub]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getConfigFile -->
+        <test-method is-config="true" signature="readConfigFile()[pri:0, instance:tests.LoginTest.LoginTest@61df66b6]" started-at="2023-05-19T10:05:47 NPT" name="readConfigFile" finished-at="2023-05-19T10:05:47 NPT" depends-on-methods="tests.Setup.getConfigFile" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readConfigFile -->
+      </class> <!-- tests.LoginTest.LoginTest -->
+    </test> <!-- LOGIN PAGE TEST -->
+  </suite> <!-- R7 Automation Suite -->
+</testng-results>
